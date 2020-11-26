@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "866348049089",
+    "firebase_url": "https://cakewareapp.firebaseio.com",
+    "project_id": "cakewareapp",
+    "storage_bucket": "cakewareapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:866348049089:android:17ca34c517e08d4d98ea40",
+        "android_client_info": {
+          "package_name": "com.example.cakeware"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "866348049089-lpd3ma9m68muqknva5i9gf80a1mmtg76.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDgfOe0Bmh84on2o0rIzhfSqEGERrImekg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "866348049089-lpd3ma9m68muqknva5i9gf80a1mmtg76.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

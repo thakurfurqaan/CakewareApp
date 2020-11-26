@@ -6,13 +6,100 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+    <Button
+        android:id="@+id/registerbtn"
+        android:layout_width="310dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="616dp"
+        android:backgroundTint="#9AFF9800"
+        android:text="Register"
+        app:iconTint="#9C27B0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/loginbtn"
+        android:layout_width="310dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="506dp"
+        android:background="@android:color/holo_blue_bright"
+        android:backgroundTint="#D003A9F4"
+        android:text="Login"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/homescreenback" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="226dp"
+        android:layout_height="211dp"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="76dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
+    <EditText
+        android:id="@+id/editTextTextEmailAddress"
+        android:layout_width="336dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="353dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:text="Email"
+        android:textColor="#FAFFFFFF"
+        android:textColorHighlight="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:textColorLink="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextTextEmailAddress2"
+        android:layout_width="336dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="424dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:text="Password"
+        android:textColor="#FAFFFFFF"
+        android:textColorHighlight="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:textColorLink="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="150dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="130dp"
+        android:layout_marginTop="589dp"
+        android:text="Don't have an account?"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="181dp"
+        android:layout_height="17dp"
+        android:layout_marginStart="115dp"
+        android:layout_marginTop="249dp"
+        android:text="The No. 1 App for Bakeware"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
