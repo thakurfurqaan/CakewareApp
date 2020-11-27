@@ -3,6 +3,8 @@ plugins {
     id 'com.android.application'
 }
 
+apply plugin: 'com.android.application'
+
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.2"
@@ -43,5 +45,4 @@ dependencies {
     compileOnly 'com.google.android.wearable:wearable:2.6.0'
 }
 
-apply plugin: 'com.android.application'
 apply plugin: 'com.google.gms.google-services'
