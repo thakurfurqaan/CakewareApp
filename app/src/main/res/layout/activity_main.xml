@@ -13,7 +13,7 @@
         android:layout_marginStart="50dp"
         android:layout_marginTop="616dp"
         android:backgroundTint="#9AFF9800"
-        android:text="Register"
+        android:text="@string/register_title"
         app:iconTint="#9C27B0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -26,7 +26,7 @@
         android:layout_marginTop="506dp"
         android:background="@android:color/holo_blue_bright"
         android:backgroundTint="#D003A9F4"
-        android:text="Login"
+        android:text="@string/login_text"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -34,6 +34,7 @@
         android:id="@+id/imageView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:contentDescription="@string/login_text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -48,6 +49,7 @@
         android:layout_marginTop="76dp"
         android:layout_marginEnd="93dp"
         android:layout_marginBottom="444dp"
+        android:contentDescription="@string/login_text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -60,8 +62,9 @@
         android:layout_height="55dp"
         android:layout_marginStart="37dp"
         android:layout_marginTop="353dp"
+        android:autofillHints=""
         android:ems="10"
-        android:hint="Email"
+        android:hint="@string/email_field_text"
         android:inputType="textEmailAddress"
         android:textColor="#FAFFFFFF"
         android:textColorHighlight="#FFFFFF"
@@ -77,14 +80,15 @@
         android:layout_marginStart="37dp"
         android:layout_marginTop="424dp"
         android:ems="10"
-        android:hint="Password"
+        android:hint="@string/password_field_text"
         android:inputType="textEmailAddress"
         android:textColor="#FAFFFFFF"
         android:textColorHighlight="#FFFFFF"
         android:textColorHint="#FFFFFF"
         android:textColorLink="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:autofillHints="" />
 
     <TextView
         android:id="@+id/textView"
@@ -92,7 +96,7 @@
         android:layout_height="20dp"
         android:layout_marginStart="130dp"
         android:layout_marginTop="589dp"
-        android:text="Don't have an account?"
+        android:text="@string/no_acc_text"
         android:textColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -103,7 +107,7 @@
         android:layout_height="17dp"
         android:layout_marginStart="115dp"
         android:layout_marginTop="249dp"
-        android:text="The No. 1 App for Bakeware"
+        android:text="@string/no_1_app_text"
         android:textColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
