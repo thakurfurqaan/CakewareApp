@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Register1">
-
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="wrap_content"
@@ -18,7 +17,6 @@
         android:id="@+id/textView4"
         android:layout_width="208dp"
         android:layout_height="75dp"
-        android:layout_marginTop="16dp"
         android:text="Register"
         android:textAlignment="center"
         android:textColor="@color/white"
@@ -26,16 +24,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:layout_editor_absoluteY="16dp" />
 
     <EditText
         android:id="@+id/editTextTextPersonName"
         android:layout_width="300dp"
         android:layout_height="45dp"
         android:ems="10"
+        android:hint="Name"
         android:inputType="textPersonName"
-        android:text="Name"
         android:textColor="@color/white"
+        android:textColorHint="@color/white"
         android:textSize="20sp"
         tools:layout_editor_absoluteX="50dp"
         tools:layout_editor_absoluteY="106dp" />
@@ -44,24 +43,24 @@
         android:id="@+id/editTextTextPersonName2"
         android:layout_width="300dp"
         android:layout_height="45dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="184dp"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Email"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
         android:textColor="@color/white"
+        android:textColorHint="@color/white"
         android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:layout_editor_absoluteX="50dp"
+        tools:layout_editor_absoluteY="184dp" />
 
     <EditText
         android:id="@+id/editTextTextPersonName3"
         android:layout_width="300dp"
         android:layout_height="45dp"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Password"
+        android:hint="Password"
+        android:inputType="textPersonName|textPassword"
         android:textColor="@color/white"
+        android:textColorHint="@color/white"
         android:textSize="20sp"
         tools:layout_editor_absoluteX="50dp"
         tools:layout_editor_absoluteY="262dp" />
@@ -71,9 +70,10 @@
         android:layout_width="300dp"
         android:layout_height="45dp"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Re-enter Password"
+        android:hint="Re-enter Password"
+        android:inputType="textPersonName|textPassword"
         android:textColor="@color/white"
+        android:textColorHint="@color/white"
         android:textSize="20sp"
         tools:layout_editor_absoluteX="50dp"
         tools:layout_editor_absoluteY="340dp" />
@@ -86,6 +86,63 @@
         android:text="Register"
         android:textSize="20sp"
         tools:layout_editor_absoluteX="50dp"
-        tools:layout_editor_absoluteY="408dp" />
+        tools:layout_editor_absoluteY="550dp" />
+
+    <RadioGroup
+        android:layout_width="306dp"
+        android:layout_height="87dp"
+        tools:layout_editor_absoluteX="50dp"
+        tools:layout_editor_absoluteY="400dp" >
+
+        <RadioButton
+            android:id="@+id/radioButton4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Personal Account"
+            android:buttonTint="@color/white"
+            android:textSize="20sp"
+            android:textColor="@color/white"/>
+
+        <RadioButton
+            android:id="@+id/radioButton5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Business Account"
+            android:buttonTint="@color/white"
+            android:textSize="20sp"
+            android:textColor="@color/white"/>
+    </RadioGroup>
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Notify me for good offers !"
+        android:buttonTint="@color/white"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        tools:layout_editor_absoluteX="50dp"
+        tools:layout_editor_absoluteY="490dp" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Already have an account?"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        tools:layout_editor_absoluteX="70dp"
+        tools:layout_editor_absoluteY="610dp" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/my_text"
+        android:textColor="@android:color/holo_blue_bright"
+        android:textSize="16sp"
+        tools:layout_editor_absoluteX="255dp"
+        tools:layout_editor_absoluteY="610dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
