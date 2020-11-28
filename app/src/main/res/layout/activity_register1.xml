@@ -10,6 +10,7 @@
         android:id="@+id/imageView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:contentDescription="@string/register_title"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/homescreenback" />
@@ -20,7 +21,7 @@
         android:layout_height="75dp"
         android:layout_marginStart="102dp"
         android:layout_marginTop="16dp"
-        android:text="Register"
+        android:text="@string/register_title"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="50sp"
@@ -36,13 +37,14 @@
         android:layout_marginStart="50dp"
         android:layout_marginTop="106dp"
         android:ems="10"
-        android:hint="Name"
+        android:hint="@string/name_field_text"
         android:inputType="textPersonName"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/editTextTextPersonName2"
@@ -51,13 +53,14 @@
         android:layout_marginStart="50dp"
         android:layout_marginTop="184dp"
         android:ems="10"
-        android:hint="Email"
+        android:hint="@string/email_field_text"
         android:inputType="textEmailAddress"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/editTextTextPersonName3"
@@ -66,13 +69,14 @@
         android:layout_marginStart="50dp"
         android:layout_marginTop="262dp"
         android:ems="10"
-        android:hint="Password"
+        android:hint="@string/password_field_text"
         android:inputType="textPersonName|textPassword"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/editTextTextPersonName4"
@@ -81,13 +85,14 @@
         android:layout_marginStart="50dp"
         android:layout_marginTop="340dp"
         android:ems="10"
-        android:hint="Re-enter Password"
+        android:hint="@string/repassword_field_text"
         android:inputType="textPersonName|textPassword"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:autofillHints="" />
 
     <Button
         android:id="@+id/button"
@@ -96,7 +101,7 @@
         android:layout_marginStart="50dp"
         android:layout_marginTop="550dp"
         android:backgroundTint="#9AFF9800"
-        android:text="Register"
+        android:text="@string/register_title"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -114,7 +119,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:buttonTint="@color/white"
-            android:text="Personal Account"
+            android:text="@string/personal_account_field_text"
             android:textColor="@color/white"
             android:textSize="20sp" />
 
@@ -123,7 +128,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:buttonTint="@color/white"
-            android:text="Business Account"
+            android:text="@string/business_account_field_text"
             android:textColor="@color/white"
             android:textSize="20sp" />
     </RadioGroup>
@@ -135,7 +140,7 @@
         android:layout_marginStart="50dp"
         android:layout_marginTop="490dp"
         android:buttonTint="@color/white"
-        android:text="Notify me for good offers !"
+        android:text="@string/notify_checkbox_text"
         android:textColor="@color/white"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -157,12 +162,12 @@
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
         android:layout_marginTop="610dp"
-        android:text="Already have an account?"
+        android:text="@string/already"
         android:textColor="@color/white"
         android:textSize="16sp"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="70dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-

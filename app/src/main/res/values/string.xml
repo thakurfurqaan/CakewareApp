@@ -1,4 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="my_text"><u>Click here!</u></string>
+    <string name="already">Already have an account?</string>
+    <string name="register_title">Register</string>
+    <string name="login_text">Login</string>
+    <string name="name_field_text">Name</string>
+    <string name="email_field_text">Email</string>
+    <string name="password_field_text">Password</string>
+    <string name="repassword_field_text">Re-enter Password</string>
+    <string name="personal_account_field_text">Personal Account</string>
+    <string name="business_account_field_text">Business Account</string>
+    <string name="notify_checkbox_text">Notify me for good offers!</string>
+    <string name="no_acc_text">Don\'t have an account?</string>
+    <string name="no_1_app_text">The No. 1 App for Bakeware</string>
+
 </resources>
