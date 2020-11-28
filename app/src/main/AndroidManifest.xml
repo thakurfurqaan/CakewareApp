@@ -4,7 +4,7 @@
 
     <uses-permission android:name="android.permission.WAKE_LOCK" />
 
-    <uses-feature android:name="android.hardware.type.watch" android:required="false"/>
+    <uses-feature android:name="android.hardware.type.watch" android:required="true"/>
 
     <application
         android:allowBackup="true"
@@ -13,7 +13,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CakewareApp">
-        <activity android:name=".Register1"></activity>
+        <activity android:name=".RegisterActivity"></activity>
 
         <uses-library
             android:name="com.google.android.wearable"

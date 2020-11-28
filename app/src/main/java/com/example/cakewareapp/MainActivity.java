@@ -5,19 +5,17 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.content.Intent;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button button;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        button = (Button) findViewById(R.id.registerbtn);
-        button.setOnClickListener(new View.OnClickListener(){
+        Button register_page_open_button = (Button) findViewById(R.id.registerbtn);
+        register_page_open_button.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
                 openRegisterForm();
@@ -26,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
     public void openRegisterForm(){
-        Intent intent = new Intent(this, Register1.class);
+        Intent intent = new Intent(this, RegisterActivity.class);
         startActivity(intent);
     }
 }
