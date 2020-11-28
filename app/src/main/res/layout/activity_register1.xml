@@ -36,6 +36,7 @@
         android:layout_height="45dp"
         android:layout_marginStart="50dp"
         android:layout_marginTop="106dp"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/name_field_text"
         android:inputType="textPersonName"
@@ -43,8 +44,7 @@
         android:textColorHint="@color/white"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:autofillHints="" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/editTextTextPersonName2"
@@ -52,6 +52,7 @@
         android:layout_height="45dp"
         android:layout_marginStart="50dp"
         android:layout_marginTop="184dp"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/email_field_text"
         android:inputType="textEmailAddress"
@@ -59,8 +60,7 @@
         android:textColorHint="@color/white"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:autofillHints="" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/editTextTextPersonName3"
@@ -68,6 +68,7 @@
         android:layout_height="45dp"
         android:layout_marginStart="50dp"
         android:layout_marginTop="262dp"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/password_field_text"
         android:inputType="textPersonName|textPassword"
@@ -75,8 +76,7 @@
         android:textColorHint="@color/white"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:autofillHints="" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/editTextTextPersonName4"
@@ -84,6 +84,7 @@
         android:layout_height="45dp"
         android:layout_marginStart="50dp"
         android:layout_marginTop="340dp"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/repassword_field_text"
         android:inputType="textPersonName|textPassword"
@@ -91,8 +92,7 @@
         android:textColorHint="@color/white"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:autofillHints="" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button"
