@@ -3,6 +3,7 @@ package com.example.cakewareapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -38,6 +39,18 @@ public class RegisterActivity extends AppCompatActivity {
                 CreateAccount();
             }
         });
+        Button home_page_open_button = (Button) findViewById(R.id.register_btn);
+        home_page_open_button.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                openHomepage();
+            }
+        });
+
+    }
+    public void openHomepage(){
+        Intent intent = new Intent(this, HomepageActivity.class);
+        startActivity(intent);
     }
 
     private void CreateAccount()
