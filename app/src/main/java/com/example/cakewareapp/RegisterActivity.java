@@ -41,7 +41,7 @@ public class RegisterActivity extends AppCompatActivity {
         Button home_page_open_button = (Button) findViewById(R.id.register_btn);
         home_page_open_button.setOnClickListener(new View.OnClickListener(){
             @Override
-            public void onClick(View v){
+            public void onClick(View view){
                 openHomepage();
             }
         });

@@ -22,9 +22,21 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button home_page_open_button = (Button) findViewById(R.id.loginbtn);
+        home_page_open_button.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                openHomepage();
+            }
+        });
+
     }
     public void openRegisterForm(){
         Intent intent = new Intent(this, RegisterActivity.class);
         startActivity(intent);
+    }
+    public void openHomepage(){
+        Intent intent1 = new Intent(this, HomeActivity.class);
+        startActivity(intent1);
     }
 }
