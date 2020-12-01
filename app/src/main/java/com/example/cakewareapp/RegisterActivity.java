@@ -23,7 +23,7 @@ public class RegisterActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-        Button createAccountButton = (Button) findViewById(R.id.register_btn);
+//        Button createAccountButton = (Button) findViewById(R.id.register_btn);
         InputName = (EditText) findViewById(R.id.register_username_input);
         InputEmail = (EditText) findViewById(R.id.register_email_input);
         InputPassword = (EditText) findViewById(R.id.register_password_input);
@@ -31,14 +31,13 @@ public class RegisterActivity extends AppCompatActivity {
 //        InputPersonal = (EditText) findViewById(R.id.personal_acc_input);
         loadingBar = new ProgressDialog(this);
 
-
-        createAccountButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-            public void onClick(View view)
-            {
-                CreateAccount();
-            }
-        });
+//        createAccountButton.setOnClickListener(new View.OnClickListener() {
+////            @Override
+//            public void onClick(View view)
+//            {
+//                CreateAccount();
+//            }
+//        });
         Button home_page_open_button = (Button) findViewById(R.id.register_btn);
         home_page_open_button.setOnClickListener(new View.OnClickListener(){
             @Override
