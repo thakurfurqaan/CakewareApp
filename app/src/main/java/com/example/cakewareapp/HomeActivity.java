@@ -33,11 +33,11 @@ public class HomeActivity extends AppCompatActivity {
         UsernameTitle = (TextView) findViewById(R.id.username_title);
         UsernameTitle.setText(Paper.book().read(Prevalent.UserNameKey));
 
-        NavUsernameTitle = (TextView) findViewById(R.id.nav_username_title);
-        NavUsernameTitle.setText(Paper.book().read(Prevalent.UserNameKey));
-
-        NavEmail = (TextView) findViewById(R.id.nav_email);
-        NavEmail.setText(Paper.book().read(Prevalent.UserNameKey));
+//        NavUsernameTitle = (TextView) findViewById(R.id.nav_username_title);
+//        NavUsernameTitle.setText(Paper.book().read(Prevalent.UserNameKey));
+//
+//        NavEmail = (TextView) findViewById(R.id.nav_email);
+//        NavEmail.setText(Paper.book().read(Prevalent.UserNameKey));
 
         LogoutBtn = (Button) findViewById(R.id.logout_btn);
         LogoutBtn.setOnClickListener(new View.OnClickListener() {

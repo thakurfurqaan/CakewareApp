@@ -124,7 +124,7 @@ public class MainActivity extends AppCompatActivity {
                         if(usersData.getPassword().equals(password)){
                             Toast.makeText(MainActivity.this, "Logged in Successfully!", Toast.LENGTH_SHORT).show();
                             loadingBar.dismiss();
-                            Intent intent = new Intent(MainActivity.this, HomeActivity.class);
+                            Intent intent = new Intent(MainActivity.this, MainActivity2.class);
                             startActivity(intent);
                         }
                         else{
