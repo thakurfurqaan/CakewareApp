@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="my_text"><u>Click here!</u></string>
-    <string name="already">Already have an account?</string>
+    <string name="already">Already have an account? <u>Click here!</u></string>
     <string name="register_title">REGISTER</string>
     <string name="login_text">Login</string>
-    <string name="name_field_text">Name</string>
+    <string name="name_field_text">Username</string>
     <string name="email_field_text">Email</string>
     <string name="password_field_text">Password</string>
     <string name="repassword_field_text">Re-enter Password</string>

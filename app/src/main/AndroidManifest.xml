@@ -15,11 +15,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CakewareApp">
-        <activity android:name=".HomeActivity"></activity>
+        <activity android:name=".HomeActivity1"></activity>
+        <activity android:name=".HomeActivity" />
         <activity
             android:name=".HomepageActivity"
             android:label="@string/title_activity_homepage"
-            android:theme="@style/Theme.CakewareApp.NoActionBar"></activity>
+            android:theme="@style/Theme.CakewareApp.NoActionBar" />
         <activity android:name=".RegisterActivity" />
 
         <uses-library
