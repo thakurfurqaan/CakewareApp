@@ -11,9 +11,9 @@
             android:onClick="ClickHome"/>
         <item
             android:id="@+id/nav_account"
-            android:icon="@drawable/ic_baseline_supervisor_account_24"
-            android:title="Change Account Details"
-            android:onClick="ClickAccount" />
+            android:icon="@drawable/ic_baseline_account_box_24"
+            android:onClick="ClickAccount"
+            android:title="Account Details" />
         <item
             android:id="@+id/nav_location"
             android:icon="@drawable/ic_baseline_my_location_24"
