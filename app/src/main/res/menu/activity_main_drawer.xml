@@ -7,18 +7,47 @@
         <item
             android:id="@+id/nav_home"
             android:icon="@drawable/ic_baseline_home_24"
-            android:title="@string/menu_home" />
-        <item
-            android:id="@+id/nav_cart"
-            android:icon="@drawable/ic_baseline_shopping_cart_24"
-            android:title="@string/menu_cart" />
-        <item
-            android:id="@+id/nav_orders"
-            android:icon="@drawable/ic_baseline_view_list_24"
-            android:title="@string/menu_orders" />
+            android:title="@string/menu_home"
+            android:onClick="ClickHome"/>
         <item
             android:id="@+id/nav_account"
             android:icon="@drawable/ic_baseline_supervisor_account_24"
-            android:title="@string/menu_account" />
+            android:title="Change Account Details"
+            android:onClick="ClickAccount" />
+        <item
+            android:id="@+id/nav_location"
+            android:icon="@drawable/ic_baseline_my_location_24"
+            android:onClick="ClickLocation"
+            android:title="Set Delivery Location" />
+        <item
+            android:id="@+id/nav_order"
+            android:icon="@drawable/ic_baseline_add_box_24"
+            android:onClick="ClickOrder"
+            android:title="Place Order" />
+        <item
+            android:id="@+id/nav_calculate"
+            android:icon="@drawable/ic_baseline_calculate_24"
+            android:onClick="ClickCalculate"
+            android:title="Calculate Costs" />
+        <item
+            android:id="@+id/nav_addresses"
+            android:icon="@drawable/ic_baseline_edit_location_24"
+            android:onClick="ClickAddress"
+            android:title="My Addresses" />
+        <item
+            android:id="@+id/nav_chatbot"
+            android:icon="@drawable/ic_baseline_chat_24"
+            android:onClick="ClickChatbot"
+            android:title="Chatbot" />
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_baseline_exit_to_app_24"
+            android:onClick="ClickLogout"
+            android:title="Logout" />
+        <item
+            android:id="@+id/nav_exit"
+            android:icon="@drawable/ic_baseline_transit_enterexit_24"
+            android:onClick="ClickExit"
+            android:title="Exit" />
     </group>
 </menu>

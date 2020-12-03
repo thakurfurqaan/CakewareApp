@@ -2,10 +2,16 @@ package com.example.cakewareapp;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -45,27 +51,15 @@ public class AccountActivity extends AppCompatActivity {
         EmailDis = (TextView) findViewById(R.id.email_dis);
 
         displayAccountDetails(Paper.book().read(Prevalent.UserNameKey));
-//        UsernameDis.setText(Paper.book().read(Prevalent.UserNameKey));
 
         ChangeEmailInput = (EditText) findViewById(R.id.email_change_input);
         ChangePasswordInput = (EditText) findViewById(R.id.password_change_input);
-        ConfirmPasswordInput = (EditText) findViewById(R.id.confirm_password_change_input);
-
-//        RefreshBtn = (Button) findViewById(R.id.refresh);
-//        RefreshBtn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(AccountActivity.this, AccountActivity.class);
-//                startActivity(intent);
-//            }
-//        });
 
         UpdateEmailBtn = (Button) findViewById(R.id.email_change_btn);
         UpdateEmailBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 updateEmail(username);
-//                Toast.makeText(AccountActivity.this, "Opened!", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -74,7 +68,6 @@ public class AccountActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 updatePassword(username);
-//                Toast.makeText(AccountActivity.this, "Opened!", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -167,4 +160,63 @@ public class AccountActivity extends AppCompatActivity {
         });
     }
 
+    private static void redirectActivity(Activity activity, Class aClass){
+        Intent intent = new Intent(activity, aClass);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        activity.startActivity(intent);
+    }
+
+    public void ClickHome(MenuItem item) {
+        redirectActivity(this, HomeActivity.class);
+    }
+    public void ClickAccount(MenuItem item) {
+        recreate();
+    }
+    public void ClickLocation(MenuItem item) {
+        redirectActivity(this, HomeActivity.class);
+    }
+    public void ClickOrder(MenuItem item) {
+        redirectActivity(this, HomeActivity.class);
+    }
+    public void ClickCalculate(MenuItem item) {
+        redirectActivity(this, HomeActivity.class);
+    }
+    public void ClickAddress(MenuItem item) {
+        redirectActivity(this, HomeActivity.class);
+    }
+    public void ClickChatbot(MenuItem item) {
+        redirectActivity(this, HomeActivity.class);
+    }
+    public void ClickLogout(MenuItem item) {
+        redirectActivity(this, LoginActivity.class);
+    }
+    public void ClickExit(MenuItem item) {
+        exitApp(this);
+    }
+    public static void exitApp(Activity activity){
+        AlertDialog.Builder builder = new AlertDialog.Builder(activity);
+        builder.setTitle("Exit");
+        builder.setMessage("Are you sure you want to exit?");
+        builder.setPositiveButton("YES", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                activity.finishAffinity();
+                System.exit(0);
+            }
+        });
+        builder.setNegativeButton("NO", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+        builder.show();
+    }
+
+    public void ClickMenu(View view) {
+        DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);
+        if (!drawerLayout.isDrawerOpen((GravityCompat.START))){
+            drawerLayout.openDrawer(GravityCompat.START);
+        }
+    }
 }

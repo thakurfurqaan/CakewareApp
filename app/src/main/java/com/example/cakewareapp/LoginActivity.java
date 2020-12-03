@@ -15,7 +15,6 @@ import android.widget.Toast;
 
 import com.example.cakewareapp.Model.Users;
 import com.example.cakewareapp.Prevalent.Prevalent;
-import com.example.cakewareapp.ui.home.HomeFragment;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -24,7 +23,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import io.paperdb.Paper;
 
-public class MainActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
     private Button login_btn;
     private Button register_btn;
     private EditText InputName, InputPassword;
@@ -38,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_login);
 
         RememberMe = (CheckBox) findViewById(R.id.remember_me);
         Paper.init(this);
@@ -123,20 +122,20 @@ public class MainActivity extends AppCompatActivity {
 
                     if(usersData.getName().equals(name)){
                         if(usersData.getPassword().equals(password)){
-                            Toast.makeText(MainActivity.this, "Logged in Successfully!", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(LoginActivity.this, "Logged in Successfully!", Toast.LENGTH_SHORT).show();
                             loadingBar.dismiss();
-                            Intent intent = new Intent(MainActivity.this, HomeActivity.class);
+                            Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
                             startActivity(intent);
                         }
                         else{
                             loadingBar.dismiss();
-                            Toast.makeText(MainActivity.this, "Invalid Credentials!", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(LoginActivity.this, "Invalid Credentials!", Toast.LENGTH_SHORT).show();
                         }
                     }
                 }
                 else{
-                    Toast.makeText(MainActivity.this, "Account does not exist!", Toast.LENGTH_SHORT).show();
-                    Toast.makeText(MainActivity.this, "Please Register!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this, "Account does not exist!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this, "Please Register!", Toast.LENGTH_SHORT).show();
                     loadingBar.dismiss();
                 }
             }
