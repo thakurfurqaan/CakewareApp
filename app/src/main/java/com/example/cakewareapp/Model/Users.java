@@ -1,5 +1,7 @@
 package com.example.cakewareapp.Model;
 
+import android.text.Editable;
+
 public class Users {
 
     private String name, email, password;

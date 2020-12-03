@@ -15,6 +15,7 @@ import android.widget.Toast;
 
 import com.example.cakewareapp.Model.Users;
 import com.example.cakewareapp.Prevalent.Prevalent;
+import com.example.cakewareapp.ui.home.HomeFragment;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -124,7 +125,7 @@ public class MainActivity extends AppCompatActivity {
                         if(usersData.getPassword().equals(password)){
                             Toast.makeText(MainActivity.this, "Logged in Successfully!", Toast.LENGTH_SHORT).show();
                             loadingBar.dismiss();
-                            Intent intent = new Intent(MainActivity.this, MainActivity2.class);
+                            Intent intent = new Intent(MainActivity.this, HomeActivity.class);
                             startActivity(intent);
                         }
                         else{

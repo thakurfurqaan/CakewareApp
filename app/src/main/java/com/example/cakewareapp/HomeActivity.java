@@ -22,7 +22,7 @@ import io.paperdb.Paper;
 
 public class HomeActivity extends AppCompatActivity {
 
-    private Button LogoutBtn;
+    private Button LogoutBtn, ChangeAccountDetailsBtn;
     private TextView NavUsernameTitle, UsernameTitle, NavEmail;
 
     @Override
@@ -46,6 +46,15 @@ public class HomeActivity extends AppCompatActivity {
                 Paper.book().destroy();
 
                 Intent intent = new Intent(HomeActivity.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        ChangeAccountDetailsBtn = (Button) findViewById(R.id.change_account_details_btn);
+        ChangeAccountDetailsBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomeActivity.this, AccountActivity.class);
                 startActivity(intent);
             }
         });
