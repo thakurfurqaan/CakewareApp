@@ -1,6 +1,5 @@
 package com.example.cakewareapp;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -12,72 +11,16 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
 
-import com.example.cakewareapp.Model.Users;
-import com.example.cakewareapp.Prevalent.Prevalent;
-import com.google.android.material.navigation.NavigationView;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
-
-import io.paperdb.Paper;
-
-public class HomeActivity extends AppCompatActivity {
-    private String parentDbName = "Users";
-    private Button LogoutBtn;
-    private TextView NavUsernameTitle, UsernameTitle, NavEmail;
+public class ChatActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
-
-        UsernameTitle = (TextView) findViewById(R.id.username_title);
-        NavUsernameTitle = (TextView) findViewById(R.id.nav_username_title);
-        NavEmail = (TextView) findViewById(R.id.nav_email);
-
-
-//        NavUsernameTitle.setText("Hahaha");
-
-        displayAccountDetails(Paper.book().read(Prevalent.UserNameKey));
-
-        LogoutBtn = (Button) findViewById(R.id.logout_btn);
-        LogoutBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Paper.book().destroy();
-
-                Intent intent = new Intent(HomeActivity.this, LoginActivity.class);
-                startActivity(intent);
-            }
-        });
+        setContentView(R.layout.activity_chat);
     }
 
-    private void displayAccountDetails(String name) {
-        final DatabaseReference RootRef;
-        RootRef = FirebaseDatabase.getInstance().getReference();
-        RootRef.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                if (dataSnapshot.child(parentDbName).child(name).exists()) {
-                    Users usersData = dataSnapshot.child(parentDbName).child(name).getValue(Users.class);
-                    UsernameTitle.setText(usersData.getName());
-//                    NavUsernameTitle.setText(usersData.getName());
-//                    NavEmail.setText(usersData.getEmail());
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-            }
-        });
-    }
-
-
+    /*    DON'T CHANGE ANYTHING BELOW THIS LINE   */
 
     private static void redirectActivity(Activity activity, Class aClass) {
         Intent intent = new Intent(activity, aClass);
@@ -147,6 +90,4 @@ public class HomeActivity extends AppCompatActivity {
             drawerLayout.openDrawer(GravityCompat.START);
         }
     }
-
-
 }

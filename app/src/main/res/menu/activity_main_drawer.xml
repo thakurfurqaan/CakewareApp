@@ -33,7 +33,7 @@
             android:id="@+id/nav_addresses"
             android:icon="@drawable/ic_baseline_edit_location_24"
             android:onClick="ClickAddress"
-            android:title="Save Address Manually" />
+            android:title="Add Address Manually" />
         <item
             android:id="@+id/nav_chatbot"
             android:icon="@drawable/ic_baseline_chat_24"

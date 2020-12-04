@@ -82,7 +82,6 @@ public class AddressActivity extends AppCompatActivity {
                 } else if (TextUtils.isEmpty(InputAddressCountry.getText().toString())) {
                     Toast.makeText(AddressActivity.this, "Please enter the country!", Toast.LENGTH_SHORT).show();
                 } else {
-                    DisplayLoadAddress.setText("Address Saved at: " + getExternalFilesDir(filePath) + "/" + fileName);
                     String address = "Current Saved Address: \n"
                             + InputAddress1.getText().toString()
                             + ",\n" + InputAddress2.getText().toString()
@@ -92,6 +91,8 @@ public class AddressActivity extends AppCompatActivity {
                             + ", " + InputAddressCountry.getText().toString();
                     fileContent = address;
                     File myExternalFile = new File(getExternalFilesDir(filePath), fileName);
+//                    @SuppressLint("SdCardPath") File myExternalFile = new File("/sdcard/", fileName);
+                    DisplayLoadAddress.setText("Address Saved at: " + myExternalFile.getPath().toString() + "/" + fileName);
                     FileOutputStream fileOutputStream = null;
                     try {
                         fileOutputStream = new FileOutputStream(myExternalFile);
@@ -99,7 +100,7 @@ public class AddressActivity extends AppCompatActivity {
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
-                    Toast.makeText(AddressActivity.this, "Address has been saved successfully!", Toast.LENGTH_SHORT).show();
+
                 }
             }
         });
@@ -108,10 +109,11 @@ public class AddressActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 FileReader fileReader = null;
-                File file = new File(getExternalFilesDir(filePath), fileName);
+                File myExternalFile = new File(getExternalFilesDir(filePath), fileName);
+//                @SuppressLint("SdCardPath") File myExternalFile = new File("/sdcard/", fileName);
                 StringBuilder stringBuilder = new StringBuilder();
                 try {
-                    fileReader = new FileReader(file);
+                    fileReader = new FileReader(myExternalFile);
                     BufferedReader bufferedReader = new BufferedReader(fileReader);
                     String line = bufferedReader.readLine();
                     while (line != null) {
@@ -134,6 +136,8 @@ public class AddressActivity extends AppCompatActivity {
         return extStorageState.equals(Environment.MEDIA_MOUNTED);
     }
 
+    /*    DON'T CHANGE ANYTHING BELOW THIS LINE   */
+
     private static void redirectActivity(Activity activity, Class aClass) {
         Intent intent = new Intent(activity, aClass);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -153,11 +157,11 @@ public class AddressActivity extends AppCompatActivity {
     }
 
     public void ClickOrder(MenuItem item) {
-        redirectActivity(this, HomeActivity.class);
+        redirectActivity(this, NotificationActivity.class);
     }
 
     public void ClickCalculate(MenuItem item) {
-        redirectActivity(this, HomeActivity.class);
+        redirectActivity(this, CalculatorActivity.class);
     }
 
     public void ClickAddress(MenuItem item) {
@@ -165,7 +169,7 @@ public class AddressActivity extends AppCompatActivity {
     }
 
     public void ClickChatbot(MenuItem item) {
-        redirectActivity(this, HomeActivity.class);
+        redirectActivity(this, ChatActivity.class);
     }
 
     public void ClickLogout(MenuItem item) {

@@ -46,13 +46,7 @@ public class LocationActivity extends AppCompatActivity {
     FusedLocationProviderClient fusedLocationProviderClient;
     TextView DisplayLatitude, DisplayLongitude, DisplayCountry, DisplayLocality, DisplayAddress;
 
-//    Button SaveLocationBtn, LoadLocationBtn;
-//    TextView DisplayLoadAddress;
-//    EditText InputAddress;
-//    String MyAddress = "Dongri Charnull";
-//    String fileName = "";
-//    String filePath = "";
-//    String fileContent = "";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,62 +73,6 @@ public class LocationActivity extends AppCompatActivity {
                 }
             }
         });
-
-
-//        SaveLocationBtn = (Button) findViewById(R.id.save_location_btn);
-//        LoadLocationBtn = (Button) findViewById(R.id.load_location_btn);
-//        DisplayLoadAddress = (TextView) findViewById(R.id.display_load_address);
-//        InputAddress = (EditText) findViewById(R.id.address_input);
-//        fileName = "address.txt";
-//        filePath = "AddressDir";
-//
-//        if (!isExternalStorageAvailable()) {
-//            SaveLocationBtn.setEnabled(false);
-//        }
-//
-//        SaveLocationBtn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                DisplayLoadAddress.setText("");
-//                fileContent = InputAddress.getText().toString().trim();
-//                if (!fileContent.equals("")) {
-//                    File myExternalFile = new File(getExternalFilesDir(filePath), fileName);
-//                    FileOutputStream fileOutputStream = null;
-//                    try {
-//                        fileOutputStream = new FileOutputStream(myExternalFile);
-//                        fileOutputStream.write(fileContent.getBytes());
-//                    } catch (IOException e) {
-//                        e.printStackTrace();
-//                    }
-//                    Toast.makeText(LocationActivity.this, "Address has been saved successfully!", Toast.LENGTH_SHORT).show();
-//                } else {
-//                    Toast.makeText(LocationActivity.this, "Please enter your address!", Toast.LENGTH_SHORT).show();
-//                }
-//            }
-//        });
-//
-//        LoadLocationBtn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                FileReader fileReader = null;
-//                File file = new File(getExternalFilesDir(filePath), fileName);
-//                StringBuilder stringBuilder = new StringBuilder();
-//                try {
-//                    fileReader = new FileReader(file);
-//                    BufferedReader bufferedReader = new BufferedReader(fileReader);
-//                    String line = bufferedReader.readLine();
-//                    while (line != null){
-//                        stringBuilder.append(line).append('\n');
-//                        line = bufferedReader.readLine();
-//                    }
-//                } catch (IOException e) {
-//                    e.printStackTrace();
-//                } finally {
-//                    String fileContent = "File content\n" + stringBuilder.toString();
-//                    DisplayLoadAddress.setText(fileContent);
-//                }
-//            }
-//        });
 
     }
 
@@ -172,10 +110,6 @@ public class LocationActivity extends AppCompatActivity {
         });
     }
 
-    private boolean isExternalStorageAvailable() {
-        String extStorageState = Environment.getExternalStorageState();
-        return extStorageState.equals(Environment.MEDIA_MOUNTED);
-    }
 
     private static void redirectActivity(Activity activity, Class aClass) {
         Intent intent = new Intent(activity, aClass);
@@ -192,15 +126,15 @@ public class LocationActivity extends AppCompatActivity {
     }
 
     public void ClickLocation(MenuItem item) {
-        recreate();
+        redirectActivity(this, LocationActivity.class);
     }
 
     public void ClickOrder(MenuItem item) {
-        redirectActivity(this, HomeActivity.class);
+        redirectActivity(this, NotificationActivity.class);
     }
 
     public void ClickCalculate(MenuItem item) {
-        redirectActivity(this, HomeActivity.class);
+        redirectActivity(this, CalculatorActivity.class);
     }
 
     public void ClickAddress(MenuItem item) {
@@ -208,7 +142,7 @@ public class LocationActivity extends AppCompatActivity {
     }
 
     public void ClickChatbot(MenuItem item) {
-        redirectActivity(this, HomeActivity.class);
+        redirectActivity(this, ChatActivity.class);
     }
 
     public void ClickLogout(MenuItem item) {

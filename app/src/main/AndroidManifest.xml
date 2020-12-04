@@ -4,10 +4,9 @@
     package="com.example.cakewareapp">
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
-
 
     <uses-feature
         android:name="android.hardware.type.watch"
@@ -20,6 +19,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CakewareApp">
+        <activity android:name=".ChatActivity"></activity>
+        <activity android:name=".CalculatorActivity" />
+        <activity android:name=".NotificationActivity" />
         <activity android:name=".AddressActivity" />
         <activity android:name=".LocationActivity" />
         <activity android:name=".AccountActivity" />
