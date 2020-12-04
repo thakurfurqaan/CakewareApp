@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.cakewareapp">
 
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
 
     <uses-feature
@@ -15,7 +16,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CakewareApp">
-        <activity android:name=".AccountActivity"></activity>
+        <activity android:name=".LocationActivity"></activity>
+        <activity android:name=".AccountActivity" />
         <activity android:name=".HomeActivity" />
         <activity android:name=".RegisterActivity" />
 

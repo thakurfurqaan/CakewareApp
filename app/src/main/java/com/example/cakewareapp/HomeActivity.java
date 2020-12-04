@@ -77,7 +77,7 @@ public class HomeActivity extends AppCompatActivity {
         });
     }
 
-    private static void redirectActivity(Activity activity, Class aClass){
+    private static void redirectActivity(Activity activity, Class aClass) {
         Intent intent = new Intent(activity, aClass);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         activity.startActivity(intent);
@@ -86,31 +86,40 @@ public class HomeActivity extends AppCompatActivity {
     public void ClickHome(MenuItem item) {
         recreate();
     }
+
     public void ClickAccount(MenuItem item) {
         redirectActivity(this, AccountActivity.class);
     }
+
     public void ClickLocation(MenuItem item) {
-        redirectActivity(this, HomeActivity.class);
+        redirectActivity(this, LocationActivity.class);
     }
+
     public void ClickOrder(MenuItem item) {
         redirectActivity(this, HomeActivity.class);
     }
+
     public void ClickCalculate(MenuItem item) {
         redirectActivity(this, HomeActivity.class);
     }
+
     public void ClickAddress(MenuItem item) {
         redirectActivity(this, HomeActivity.class);
     }
+
     public void ClickChatbot(MenuItem item) {
         redirectActivity(this, HomeActivity.class);
     }
+
     public void ClickLogout(MenuItem item) {
         redirectActivity(this, LoginActivity.class);
     }
+
     public void ClickExit(MenuItem item) {
         exitApp(this);
     }
-    public static void exitApp(Activity activity){
+
+    public static void exitApp(Activity activity) {
         AlertDialog.Builder builder = new AlertDialog.Builder(activity);
         builder.setTitle("Exit");
         builder.setMessage("Are you sure you want to exit?");
@@ -132,7 +141,7 @@ public class HomeActivity extends AppCompatActivity {
 
     public void ClickMenu(View view) {
         DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);
-        if (!drawerLayout.isDrawerOpen((GravityCompat.START))){
+        if (!drawerLayout.isDrawerOpen((GravityCompat.START))) {
             drawerLayout.openDrawer(GravityCompat.START);
         }
     }

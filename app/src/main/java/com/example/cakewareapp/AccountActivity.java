@@ -173,7 +173,7 @@ public class AccountActivity extends AppCompatActivity {
         recreate();
     }
     public void ClickLocation(MenuItem item) {
-        redirectActivity(this, HomeActivity.class);
+        redirectActivity(this, LocationActivity.class);
     }
     public void ClickOrder(MenuItem item) {
         redirectActivity(this, HomeActivity.class);
