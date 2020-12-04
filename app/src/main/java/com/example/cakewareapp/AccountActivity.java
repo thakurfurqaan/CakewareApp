@@ -182,7 +182,7 @@ public class AccountActivity extends AppCompatActivity {
         redirectActivity(this, HomeActivity.class);
     }
     public void ClickAddress(MenuItem item) {
-        redirectActivity(this, HomeActivity.class);
+        redirectActivity(this, AddressActivity.class);
     }
     public void ClickChatbot(MenuItem item) {
         redirectActivity(this, HomeActivity.class);

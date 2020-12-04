@@ -77,6 +77,8 @@ public class HomeActivity extends AppCompatActivity {
         });
     }
 
+
+
     private static void redirectActivity(Activity activity, Class aClass) {
         Intent intent = new Intent(activity, aClass);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -84,7 +86,7 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     public void ClickHome(MenuItem item) {
-        recreate();
+        redirectActivity(this, HomeActivity.class);
     }
 
     public void ClickAccount(MenuItem item) {
@@ -104,7 +106,7 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     public void ClickAddress(MenuItem item) {
-        redirectActivity(this, HomeActivity.class);
+        redirectActivity(this, AddressActivity.class);
     }
 
     public void ClickChatbot(MenuItem item) {

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LocationActivity"
+    tools:context=".AddressActivity"
     android:id="@+id/drawer_layout">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -18,7 +18,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="104dp"
             android:backgroundTint="#00BCD4"
-            android:text="Your Location"
+            android:text="Enter Address Manually"
             android:textColorHighlight="#FFFFFF"
             android:textColorHint="#00BCD4"
             android:textSize="24sp"
@@ -61,134 +61,26 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
-            android:id="@+id/get_location_btn"
-            android:layout_width="373dp"
-            android:layout_height="60dp"
+        <EditText
+            android:id="@+id/address1_input"
+            android:layout_width="378dp"
+            android:layout_height="47dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="372dp"
-            android:backgroundTint="#FF9800"
-            android:text="Get My Location"
+            android:layout_marginTop="164dp"
+            android:ems="10"
+            android:hint="Address Line 1"
+            android:inputType="textPersonName"
             android:textSize="12sp"
-            app:icon="@drawable/ic_baseline_my_location_24"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/display_latitude"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="92dp"
-            android:layout_marginTop="308dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/display_latitude5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="60dp"
-            android:layout_marginTop="444dp"
-            android:text="Please tap on this button to get your location!"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/display_country2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="224dp"
-            android:text="Country:"
-            android:textColor="#00BCD4"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/display_longitude2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="332dp"
-            android:text="Longitude:"
-            android:textColor="#00BCD4"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/display_country"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="92dp"
-            android:layout_marginTop="224dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/display_locality2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="200dp"
-            android:text="Locality:"
-            android:textColor="#00BCD4"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/display_locality"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="92dp"
-            android:layout_marginTop="200dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/textView25"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="264dp"
-            android:backgroundTint="#00BCD4"
-            android:text="Your Coordinates"
-            android:textColorHighlight="#FFFFFF"
-            android:textColorHint="#00BCD4"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/display_latitude4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="308dp"
-            android:text="Latitude:"
-            android:textColor="#00BCD4"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/display_longitude"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="92dp"
-            android:layout_marginTop="332dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/display_address"
-            android:layout_width="309dp"
-            android:layout_height="45dp"
-            android:layout_marginStart="92dp"
-            android:layout_marginTop="148dp"
+            android:layout_width="378dp"
+            android:layout_height="166dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="532dp"
+            android:text="No saved addresses found!"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -197,11 +89,167 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="148dp"
-            android:text="Address:"
+            android:layout_marginTop="224dp"
+            android:text="Address Line 2"
             android:textColor="#00BCD4"
             android:textColorHint="#FF9800"
             android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/display_address4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="300dp"
+            android:text="Pincode"
+            android:textColor="#00BCD4"
+            android:textColorHint="#FF9800"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/display_address7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="376dp"
+            android:text="State"
+            android:textColor="#00BCD4"
+            android:textColorHint="#FF9800"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/display_address6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="220dp"
+            android:layout_marginTop="300dp"
+            android:text="City"
+            android:textColor="#00BCD4"
+            android:textColorHint="#FF9800"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/display_address8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="220dp"
+            android:layout_marginTop="372dp"
+            android:text="Country"
+            android:textColor="#00BCD4"
+            android:textColorHint="#FF9800"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/address2_input"
+            android:layout_width="378dp"
+            android:layout_height="47dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="240dp"
+            android:ems="10"
+            android:hint="Address Line 2"
+            android:inputType="textPersonName"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/address_pincode_input"
+            android:layout_width="175dp"
+            android:layout_height="47dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="316dp"
+            android:ems="10"
+            android:hint="Pincode"
+            android:inputType="textPersonName"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/address_state_input"
+            android:layout_width="175dp"
+            android:layout_height="47dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="392dp"
+            android:ems="10"
+            android:hint="State"
+            android:inputType="textPersonName"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/address_country_input"
+            android:layout_width="175dp"
+            android:layout_height="47dp"
+            android:layout_marginStart="220dp"
+            android:layout_marginTop="392dp"
+            android:ems="10"
+            android:hint="Country"
+            android:inputType="textPersonName"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/address_city_input"
+            android:layout_width="175dp"
+            android:layout_height="47dp"
+            android:layout_marginStart="220dp"
+            android:layout_marginTop="316dp"
+            android:ems="10"
+            android:hint="City"
+            android:inputType="textPersonName"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/display_address3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="148dp"
+            android:text="Address Line 1"
+            android:textColor="#00BCD4"
+            android:textColorHint="#FF9800"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/load_location_btn"
+            android:layout_width="182dp"
+            android:layout_height="66dp"
+            android:layout_marginStart="212dp"
+            android:layout_marginTop="456dp"
+            android:backgroundTint="#FF9800"
+            android:text="View My Saved Address"
+            android:textSize="12sp"
+            app:icon="@drawable/ic_baseline_save_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/save_location_btn"
+            android:layout_width="182dp"
+            android:layout_height="66dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="456dp"
+            android:backgroundTint="#00BCD4"
+            android:text="Save My Address"
+            android:textSize="12sp"
+            app:icon="@drawable/ic_baseline_add_location_24"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
