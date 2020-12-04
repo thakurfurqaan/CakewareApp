@@ -1,23 +1,54 @@
 package com.example.cakewareapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 
 public class NotificationActivity extends AppCompatActivity {
+    Button placeorderbtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notification);
+
+        placeorderbtn = (Button) findViewById(R.id.placeorderbtn);
+
+        placeorderbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String message = "We have received your order request and your order will be delivered to you shortly.";
+                NotificationCompat.Builder builder = new NotificationCompat.Builder(NotificationActivity.this,"cake").setSmallIcon(R.drawable.ic_message).setContentTitle("Order Placed").setContentText(message).setAutoCancel(true);
+
+                Intent intent = new Intent(NotificationActivity.this,
+                        HomeActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                //intent.putExtra("message",message)
+
+                PendingIntent pendingIntent = PendingIntent.getActivity(NotificationActivity.this,
+                        0,intent,PendingIntent.FLAG_UPDATE_CURRENT);
+
+                builder.setContentIntent(pendingIntent);
+
+                NotificationManager notificationManager = (NotificationManager)getSystemService(
+                        Context.NOTIFICATION_SERVICE
+                );
+                notificationManager.notify(0,builder.build());
+            }
+        });
     }
 
 
