@@ -17,7 +17,6 @@ import android.widget.TextView;
 
 import com.example.cakewareapp.Model.Users;
 import com.example.cakewareapp.Prevalent.Prevalent;
-import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -110,7 +109,7 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     public void ClickChatbot(MenuItem item) {
-        redirectActivity(this, ChatActivity.class);
+        redirectActivity(this, ChatbotActivity.class);
     }
 
     public void ClickLogout(MenuItem item) {

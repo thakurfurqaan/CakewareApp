@@ -169,7 +169,7 @@ public class AddressActivity extends AppCompatActivity {
     }
 
     public void ClickChatbot(MenuItem item) {
-        redirectActivity(this, ChatActivity.class);
+        redirectActivity(this, ChatbotActivity.class);
     }
 
     public void ClickLogout(MenuItem item) {

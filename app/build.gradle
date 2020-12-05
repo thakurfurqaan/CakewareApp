@@ -29,6 +29,11 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
+    packagingOptions{
+        exclude 'META-INF/INDEX.LIST'
+        exclude 'META-INF/DEPENDENCIES'
+    }
 }
 
 dependencies {
@@ -52,6 +57,10 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     compileOnly 'com.google.android.wearable:wearable:2.8.1'
+
+    // DialogFlow Dependencies
+    implementation 'com.google.cloud:google-cloud-dialogflow:2.1.0'
+    implementation 'io.grpc:grpc-okhttp:1.30.0'
 }
 
 apply plugin: 'com.google.gms.google-services'
