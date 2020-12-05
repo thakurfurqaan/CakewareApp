@@ -7,11 +7,13 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -28,25 +30,36 @@ public class NotificationActivity extends AppCompatActivity {
         placeorderbtn = (Button) findViewById(R.id.placeorderbtn);
 
         placeorderbtn.setOnClickListener(new View.OnClickListener() {
+
+
             @Override
             public void onClick(View v) {
                 String message = "We have received your order request and your order will be delivered to you shortly.";
-                NotificationCompat.Builder builder = new NotificationCompat.Builder(NotificationActivity.this,"cake").setSmallIcon(R.drawable.ic_message).setContentTitle("Order Placed").setContentText(message).setAutoCancel(true);
 
-                Intent intent = new Intent(NotificationActivity.this,
-                        HomeActivity.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                //intent.putExtra("message",message)
+                NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
 
-                PendingIntent pendingIntent = PendingIntent.getActivity(NotificationActivity.this,
-                        0,intent,PendingIntent.FLAG_UPDATE_CURRENT);
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                    String CHANNEL_ID = "my_channel_01";
+                    CharSequence name = "my_channel";
+                    int importance = NotificationManager.IMPORTANCE_HIGH;
+                    NotificationChannel notificationChannel = new NotificationChannel(CHANNEL_ID, name, importance);
+                    notificationManager.createNotificationChannel(notificationChannel);
 
-                builder.setContentIntent(pendingIntent);
 
-                NotificationManager notificationManager = (NotificationManager)getSystemService(
-                        Context.NOTIFICATION_SERVICE
-                );
-                notificationManager.notify(0,builder.build());
+                    NotificationCompat.Builder builder = new NotificationCompat.Builder(NotificationActivity.this, CHANNEL_ID).setSmallIcon(R.drawable.ic_message).setContentTitle("Order Placed Successfully!").setContentText(message).setAutoCancel(true);
+
+                    Intent intent = new Intent(NotificationActivity.this,
+                            HomeActivity.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    //intent.putExtra("message",message)
+
+                    PendingIntent pendingIntent = PendingIntent.getActivity(NotificationActivity.this,
+                            0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+
+                    builder.setContentIntent(pendingIntent);
+
+                    notificationManager.notify(0, builder.build());
+                }
             }
         });
     }
