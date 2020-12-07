@@ -13,4 +13,20 @@
     <string name="no_acc_text">Don\'t have an account?</string>
     <string name="no_1_app_text">The No. 1 App for Bakeware</string>
 
+    <string-array name="spin1">
+        <item>Cocoa Powder 80/kg</item>
+        <item>Dark Chocolate Compound 1000/kg</item>
+        <item>Baking Powder 40/kg</item>
+    </string-array>
+
+    <string-array name="spin2">
+        <item>100</item>
+        <item>250</item>
+        <item>500</item>
+        <item>750</item>
+        <item>1000</item>
+        <item>2000</item>
+        <item>5000</item>
+    </string-array>
+
 </resources>
